@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#1a0508">
+<title>Shubho Diwali, Santhona Butki 💞</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap');
+
+:root{
+  --gold:#d4af37;
+  --gold-light:#f3e5ab;
+  --gold-dark:#9f7c34;
+  --ivory:#fdfbf7;
+  /* Transparent glass effect */
+  --glass:rgba(20, 5, 10, 0.6); 
+  --glass-border:rgba(212, 175, 55, 0.4);
+}
+
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;padding:0}
+
+body{
+  font-family:'Cormorant Garamond',Georgia,serif;
+  color:var(--ivory);
+  background-image: url('icon.png');
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-color: #1a0508;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  line-height:1.65;
+}
+
+.bg-overlay {
+  position: fixed; inset: 0;
+  background: radial-gradient(circle at center, rgba(26,5,8,0.2) 0%, rgba(26,5,8,0.7) 100%);
+  z-index: -1; pointer-events: none;
+}
+
+/* ---------- hero section ---------- */
+.hero{
+  position:relative; min-height: 80vh;
+  display:flex; align-items:center; justify-content:center;
+  padding:60px 20px;
+}
+.hero-inner{
+  max-width: 700px; text-align:center;
+  padding: 50px 30px; 
+  background: var(--glass);
+  backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border);
+  border-radius: 8px; box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+.eyebrow{
+  font-family:'Playfair Display',Georgia,serif;
+  font-size:12px; letter-spacing:8px; text-transform:uppercase;
+  color:var(--gold); margin:0 0 24px;
+}
+.eyebrow::before,.eyebrow::after{
+  content:""; display:inline-block; width:30px; height:1px;
+  background:var(--gold); vertical-align:middle; margin:0 16px; opacity:.6;
+}
+h1{
+  font-family:'Playfair Display',Georgia,serif;
+  font-weight:600; font-size:clamp(2.5rem,8vw,4.5rem);
+  line-height:1.1; margin:0 0 6px; color:var(--ivory);
+  text-shadow: 0 4px 15px rgba(0,0,0,0.8);
+}
+h1 .accent{
+  display:block; font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic; color:var(--gold-light);
+  font-size:.5em; letter-spacing:1px; margin-top:12px;
+}
+.lede{
+  font-size:clamp(1.1rem,2.6vw,1.3rem);
+  color:#ffeaea; line-height:1.9; margin:26px auto 0; max-width:500px;
+}
+.lede .name{color:var(--gold); font-weight:600; font-style:italic}
+
+/* ---------- diya row ---------- */
+.diyas{ display:flex; justify-content:center; gap:clamp(28px,7vw,56px); margin:44px 0 0; }
+.diya{
+  position:relative; width:48px; height:24px; border-radius:0 0 40px 40px;
+  background:linear-gradient(180deg,#e6b261 0%,#c86b32 55%,#8f3d1e 100%);
+  box-shadow: inset 0 2px 3px rgba(255,240,200,.6), inset 0 -3px 6px rgba(60,20,8,.5), 0 10px 20px -4px rgba(0,0,0,0.5);
+}
+.flame{
+  position:absolute; left:50%; top:-24px; width:14px; height:22px; transform:translateX(-50%);
+  border-radius:90% 10% 90% 10%; background:linear-gradient(30deg,#e04a1c 10%,#f5a13a 60%,#ffe28a 100%);
+  box-shadow:0 0 16px 6px rgba(245,161,58,.6);
+  animation:flicker 1.2s infinite alternate ease-in-out; transform-origin:50% 100%;
+}
+@keyframes flicker{
+  0%{transform:translateX(-50%) rotate(-3deg) scale(.94,.94)}
+  100%{transform:translateX(-50%) rotate(4deg) scale(1.04,1.08)}
+}
+
+/* ---------- main sections ---------- */
+main{
+  max-width: 800px; margin:0 auto; padding: 20px 22px 100px;
+  text-align:center; display: flex; flex-direction: column; align-items: center;
+}
+.section-title{
+  font-family:'Playfair Display',Georgia,serif; font-weight:400;
+  font-size:clamp(1.8rem,4.5vw,2.4rem); color:var(--gold-light);
+  margin:0 0 8px; letter-spacing:1px; text-shadow: 0 2px 10px rgba(0,0,0,0.8);
+}
+.section-title::after{
+  content:""; display:block; width:60px; height:1px;
+  background:var(--gold); margin:16px auto 0;
+}
+
+/* photo frame (Main Page) */
+.photo-wrap{ margin:50px auto 0; width:min(300px,75vw); position:relative; }
+.photo-frame{
+  position:relative; aspect-ratio:1/1; border-radius:6px; padding:10px;
+  background: var(--glass); backdrop-filter: blur(8px);
+  border: 1px solid var(--gold); box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+.photo-frame img{ width:100%; height:100%; object-fit:cover; display:block; border-radius:2px; }
+.photo-caption{ margin-top:32px; font-family:'Playfair Display',Georgia,serif; font-size:11px; letter-spacing:5px; text-transform:uppercase; color:var(--gold); }
+
+/* letter (Transparent) */
+.letter{
+  margin:50px auto 0; max-width:600px; padding:50px clamp(24px,6vw,60px);
+  background: var(--glass); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+  border: 1px solid var(--glass-border); border-radius:8px; position:relative;
+  text-align:left; box-shadow: 0 20px 50px rgba(0,0,0,0.6);
+}
+.letter p{ margin:0 0 22px; font-size:clamp(1.1rem,2.6vw,1.2rem); line-height:2; color:#fff5f5; }
+.letter p:last-of-type{margin-bottom:0}
+.letter .signature{ font-family:'Cormorant Garamond',Georgia,serif; font-style:italic; font-size:1.6rem; color:var(--gold); text-align:right; margin-top:30px; padding-top:24px; border-top:1px solid rgba(212, 175, 55, 0.3); }
+
+/* buttons */
+.actions{ margin-top:56px; display:flex; justify-content:center; flex-wrap:wrap; gap:16px; }
+.btn{
+  border:1px solid var(--gold); background:transparent; color:var(--gold-light);
+  font-family:'Playfair Display',Georgia,serif; font-size:13px; letter-spacing:2px;
+  text-transform:uppercase; padding:16px 32px; border-radius:6px; cursor:pointer;
+  transition:all .3s; backdrop-filter: blur(5px); text-decoration:none; display:inline-block;
+}
+.btn:hover{ background:var(--gold); color:#1a0508; box-shadow: 0 0 20px rgba(212, 175, 55, 0.4); }
+
+/* game teaser */
+.game-teaser{
+  margin-top:56px; width:100%; max-width:520px; padding:36px 28px;
+  background: var(--glass); backdrop-filter: blur(12px);
+  border: 1px solid rgba(255,105,180,0.4); border-radius:8px;
+  box-shadow: 0 20px 50px rgba(0,0,0,0.6); text-align:center;
+}
+.game-teaser h3{ font-family:'Playfair Display',Georgia,serif; color:#ffb6c1; font-size:1.4rem; margin:0 0 10px; letter-spacing:1px; }
+.game-teaser p{ color:#ffe8ef; font-size:1rem; line-height:1.8; margin:0 0 22px; }
+.pink-btn{
+  border:1px solid #ff69b4; background:linear-gradient(135deg,#ff69b4,#ff1493);
+  color:#fff; font-family:'Playfair Display',Georgia,serif; font-size:13px; letter-spacing:2px;
+  text-transform:uppercase; padding:16px 34px; border-radius:30px; cursor:pointer;
+  transition:all .3s; text-decoration:none; display:inline-block; box-shadow: 0 8px 24px rgba(255,105,180,0.35);
+}
+.pink-btn:hover{ box-shadow: 0 0 26px rgba(255,105,180,0.7); transform: translateY(-2px); }
+
+/* footer */
+footer{
+  text-align:center; padding:40px 20px; font-family:'Playfair Display',Georgia,serif;
+  font-size:11px; letter-spacing:4px; text-transform:uppercase; color:var(--gold-dark);
+  background: rgba(15, 5, 10, 0.8); backdrop-filter: blur(10px); border-top: 1px solid rgba(212, 175, 55, 0.2);
+}
+footer .heart{color:#ff4d6d; display:inline-block; animation:pulse 1.5s infinite}
+@keyframes pulse{50%{transform:scale(1.3)}}
+
+/* ====================================================
+   GIFT UI (Starry Rope & Polaroid Hanging)
+==================================================== */
+#gift-ui{
+  position:fixed; inset:0;
+  background: #0d0205;
+  background-image: radial-gradient(circle at center, #2a0d16 0%, #0d0205 100%);
+  z-index:100; overflow-y:auto; overflow-x:hidden;
+  opacity:0; pointer-events:none; transition: opacity 0.8s ease;
+  display:flex; flex-direction:column; align-items:center; padding:80px 10px 60px;
+}
+#gift-ui.show{opacity:1; pointer-events:auto}
+
+/* Magical Background Lights (Bokeh) */
+.bokeh-bg { position: absolute; inset: 0; overflow: hidden; pointer-events: none; z-index: 0; }
+.bokeh { position: absolute; border-radius: 50%; background: #d4af37; filter: blur(15px); opacity: 0.15; animation: floatBokeh linear infinite; }
+@keyframes floatBokeh {
+  0% { transform: translateY(100vh) scale(0.5); opacity: 0; }
+  20% { opacity: 0.3; }
+  80% { opacity: 0.3; }
+  100% { transform: translateY(-20vh) scale(1.5); opacity: 0; }
+}
+
+.close-gift{
+  position:fixed; top:20px; right:20px; background:rgba(212, 175, 55, 0.2);
+  border:1px solid var(--gold); color:var(--gold); width:40px; height:40px;
+  border-radius:50%; font-size:20px; cursor:pointer; backdrop-filter:blur(5px);
+  z-index:101; display:flex; align-items:center; justify-content:center; transition:0.3s;
+}
+.close-gift:hover{background:var(--gold); color:#110305}
+
+.gift-title{
+  font-family:'Playfair Display',Georgia,serif; font-size:clamp(1.8rem,6vw,3rem);
+  color:var(--gold-light); text-align:center; margin:0 0 50px;
+  text-shadow: 0 0 20px rgba(212, 175, 55, 0.3); position: relative; z-index: 2;
+}
+.gift-title span{
+  display:block; font-size:0.4em; font-family:'Cormorant Garamond',serif;
+  font-style:italic; color:var(--gold); letter-spacing:2px; margin-top:10px;
+}
+
+/* Hanging Layout */
+.rope-container{
+  position:relative; width:100%; max-width:800px;
+  display:flex; flex-direction:column; align-items:center; gap:60px;
+  padding-top:30px; z-index: 2;
+}
+
+/* The Rope Line */
+.rope-line{
+  position:absolute; top:40px; left:5%; right:5%; height:4px;
+  background: repeating-linear-gradient(45deg, #5c4033, #5c4033 6px, #8b5a2b 6px, #8b5a2b 12px);
+  border-radius:2px; box-shadow: 0 4px 10px rgba(0,0,0,0.8); z-index:1;
+}
+
+/* The Hanging Polaroid Card */
+.hanging-card{
+  position:relative; width:85%; max-width:290px;
+  background:#fffaf0; padding:15px 15px 35px 15px;
+  border-radius:2px; box-shadow: 0 20px 40px rgba(0,0,0,0.9), 0 0 0 1px #ddd inset;
+  z-index:2; transform-origin: top center;
+  animation: sway 5s ease-in-out infinite alternate;
+  display: flex; flex-direction: column; align-items: center;
+}
+@keyframes sway {
+  0% { transform: rotate(-3deg); }
+  100% { transform: rotate(3deg); }
+}
+
+/* Realistic Wooden Clothespin */
+.clothespin{
+  position:absolute; top:-30px; left:50%; transform:translateX(-50%);
+  width:16px; height:36px;
+  background:linear-gradient(90deg, #a67c52 0%, #e0c09a 20%, #a67c52 80%, #6b4a2b 100%);
+  border-radius:3px; box-shadow: 2px 4px 6px rgba(0,0,0,0.7);
+  border: 1px solid #5a3d24;
+}
+.clothespin::after{
+  content:""; position:absolute; bottom:2px; left:50%; transform: translateX(-50%);
+  width:10px; height:12px; background:#444; border-radius:2px;
+}
+
+.hanging-card.left { align-self: flex-start; margin-left: 8%; animation-delay: 0s;}
+.hanging-card.right { align-self: flex-end; margin-right: 8%; animation-delay: -1.5s;}
+.hanging-card.center { align-self: center; animation-delay: -2.5s;}
+.hanging-card.down { align-self: center; margin-left: 15%; animation-delay: -3.5s;}
+
+.hanging-card img{
+  width:100%; aspect-ratio:1/1; object-fit:cover;
+  border-radius:1px; background:#1a0508;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+  margin-bottom: 15px;
+}
+
+.hanging-card p{
+  margin:0; font-family:'Cormorant Garamond',Georgia,serif;
+  font-style:italic; font-size:1.15rem; color:#3a1820;
+  text-align:center; line-height:1.4; padding: 0 10px;
+}
+
+/* sparkles */
+.spark{ position:fixed; pointer-events:none; z-index:10; font-size:20px; animation:rise 2.5s ease-out forwards; will-change:transform,opacity; }
+@keyframes rise{ 0%{transform:translateY(0) rotate(0); opacity:0} 20%{opacity:1} 100%{transform:translateY(-70vh) rotate(180deg); opacity:0} }
+</style>
+</head>
+<body>
+
+<div class="bg-overlay"></div>
+
+<header class="hero">
+  <div class="hero-inner">
+    <p class="eyebrow">Alor Utshob</p>
+    <h1>Shubho Diwali <span class="accent">— shudhu tomari jonno</span></h1>
+    <p class="lede">Amar priyo <span class="name">Santhona Butki</span>...<br>ei Diwali te amar duniya'r sobcheye shundor alo tumi. 💞</p>
+    <div class="diyas" aria-hidden="true">
+      <div class="diya"><span class="flame"></span></div>
+      <div class="diya"><span class="flame"></span></div>
+      <div class="diya"><span class="flame"></span></div>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section>
+    <h2 class="section-title">Amar Duniya</h2>
+    <div class="photo-wrap">
+      <div class="photo-frame"><img src="wife.jpg" alt="Santhona Butki" onerror="this.style.display='none'"></div>
+      <div class="photo-caption">— chirokal —</div>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="section-title" style="margin-top:60px;">Ekta Chithi</h2>
+    <div class="letter">
+      <p>Amar jaan,</p>
+      <p>Diwalir prodip shob ghore alo kore, kintu tumi amar pura jibon alokito kore rakho. Tomar hashir amar sobcheye priyo khushi.</p>
+      <p>Pray kori amader valobasha protibochor aro ghire uthuk — ebong shob Diwali amra ekshathe katiye dei.</p>
+      <div class="signature">— tomar, chirokal</div>
+    </div>
+  </section>
+
+  <div class="actions">
+    <button class="btn" onclick="openGift()">Tomar Upaher Kholo 🎁</button>
+    <button class="btn" onclick="sparkle()">Ektu Alo ✨</button>
+  </div>
+
+  <div class="game-teaser">
+    <h3>Amar Shona'r Golapi Duniya</h3>
+    <p>Ekta choto surprise game, shudhu tomar jonno. Khelo ebong dekho ki hoy!</p>
+    <a href="game.html" class="pink-btn">Golapi Duniya te Jao 💖</a>
+  </div>
+</main>
+
+<footer>Bhalobasha diye banano <span class="heart">♥</span> Santhona Butki'r jonno</footer>
+
+<!-- GIFT UI -->
+<div id="gift-ui">
+  <div class="bokeh-bg" id="bokeh-container"></div>
+  <button class="close-gift" onclick="closeGift()">✕</button>
+  <h2 class="gift-title">Amar Tomar Smriti 💞<span>— Amader smritigulo dekhte niche scroll koro —</span></h2>
+  
+  <div class="rope-container">
+    <div class="rope-line"></div>
+    <div id="memory-gallery" style="display: contents;"></div>
+  </div>
+</div>
+
+<script>
+const cuteTexts = [
+  "Tomar hashir amar sobcheye priyo khushi. (Your smile is my favorite happiness.)",
+  "Tomar sathe protidin ekta area utshob er moto lage. (Every day feels like a festival.)",
+  "Amar duniya'r sobcheye shundor alo tumi. (You are the most beautiful light.)",
+  "I love you, today, tomorrow, and always. 💖",
+  "Tumi ache toh sob kichu ache. (Because you are here, I have everything.)",
+  "Amar chokhe tumi shobcheye shundor. (You are the most beautiful in my eyes.)",
+  "Tomar sathe chirokal thakte chai. (I want to stay with you forever.)",
+  "Tumi amar jibon er shobcheye boro upohar. (You are the biggest gift of my life.)",
+  "Protita muhurto tomar sathe, ekta notun golpo. (Every moment is a new story.)",
+  "Tomar kotha vebe amar din kete jay. (My days pass by thinking of you.)",
+  "Tomar sathe thakle somoy theme jay. (Time stops when I am with you.)",
+  "Tumi amar sobcheye boro shokti. (You are my greatest strength.)",
+  "Hashi mukhe thako sob somoy, setai amar chawa. (Keep smiling, that's my wish.)",
+  "Amar mon bole tumi e amar sob kichu. (My heart says you are my everything.)",
+  "Tumi chara amar ekta din o bhalo lage na. (A day without you feels incomplete.)",
+  "Chirokal tomari sathe, ei bhalobasha niye. (Forever with you, with this love.)"
+];
+
+const galleryContainer = document.getElementById('memory-gallery');
+const positions = ['left', 'right', 'center', 'down'];
+
+async function loadGallery() {
+  for (let i = 0; i <= 15; i++) {
+    let src = i === 0 ? 'sano.png' : `sano${i}.png`;
+    await new Promise((resolve) => {
+      let img = new Image();
+      img.onload = () => {
+        const card = document.createElement('div');
+        card.className = `hanging-card ${positions[i % 4]}`;
+        let text = cuteTexts[i] || "Tumi amar jibon er shobcheye shundor ongo.";
+        card.innerHTML = `
+          <div class="clothespin"></div>
+          <img src="${src}" alt="Memory ${i}">
+          <p>"${text}"</p>
+        `;
+        galleryContainer.appendChild(card);
+        resolve();
+      };
+      img.onerror = () => resolve();
+      img.src = src;
+    });
+  }
+}
+loadGallery();
+
+const bokehContainer = document.getElementById('bokeh-container');
+for (let i = 0; i < 15; i++) {
+  const b = document.createElement('div');
+  b.className = 'bokeh';
+  const size = Math.random() * 40 + 20 + 'px';
+  b.style.width = size; b.style.height = size;
+  b.style.left = Math.random() * 100 + 'vw';
+  b.style.animationDuration = (Math.random() * 10 + 10) + 's';
+  b.style.animationDelay = Math.random() * 5 + 's';
+  b.style.background = i % 2 === 0 ? '#d4af37' : '#ffb6c1'; 
+  bokehContainer.appendChild(b);
+}
+
+function openGift(){
+  document.getElementById('gift-ui').classList.add('show');
+  document.body.style.overflow = 'hidden'; 
+  sparkle();
+}
+function closeGift(){
+  document.getElementById('gift-ui').classList.remove('show');
+  document.body.style.overflow = 'auto'; 
+}
+function sparkle(){
+  const icons = ['✦','✧','✧','✦','✧'];
+  for (let i = 0; i < 25; i++){
+    const s = document.createElement('span');
+    s.className = 'spark';
+    s.textContent = icons[i % icons.length];
+    s.style.left = (10 + Math.random() * 80) + 'vw';
+    s.style.bottom = '15vh';
+    s.style.color = i % 2 ? '#d4af37' : '#ffb6c1'; 
+    s.style.animationDelay = (Math.random() * 0.8) + 's';
+    document.body.appendChild(s);
+    setTimeout(() => s.remove(), 3000);
+  }
+}
+</script>
+</body>
+</html>
